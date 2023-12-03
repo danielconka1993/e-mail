@@ -7,7 +7,7 @@ Zadejte do terminálu:
 2. npm install
 3. npm start
 
-## Pro spuštení FrontEndu
+## Pro spuštení BackEndu
 Zadejte do terminálu:
 1. cd. /server
 2. npm install
