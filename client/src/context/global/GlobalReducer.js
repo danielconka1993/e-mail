@@ -14,12 +14,14 @@ const GlobalReducer = (state, action) => {
     case "LOGIN_DATA": // Login Data
         return{
           ...state,
-          // musíse k nim přistoupit pomocí jejich klíčů v rámci objektu pokud je jich víc, proto .login atd...
+          // přistupuje se k nim pomocí jejich klíčů v rámci objektu pokud je jich víc, proto .login atd...
           loginID: action.payload.loginID,
           loginEmail: action.payload.loginEmail,
           loginName: action.payload.loginName,
           loginPhone: action.payload.loginPhone,
           loginRank: action.payload.loginRank,
+          loginShoppingBasket: action.payload.loginShoppingBasket,
+          loginPurchasesCompleted: action.payload.loginPurchasesCompleted,
           loginDate: action.payload.loginDate
         }
     default: return state;

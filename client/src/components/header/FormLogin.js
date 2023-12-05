@@ -88,6 +88,8 @@ const FormLogin = () => {
               finalData.user[0].name,
               finalData.user[0].phone,
               finalData.user[0].rank,
+              finalData.user[0].shoppingBasket,
+              finalData.user[0].purchasesCompleted,
               finalData.user[0].date
             );
             setError("Přihlášení dokončeno");

@@ -1,7 +1,6 @@
 .OneProduct{
     width: clamp(700px, 96%, 1366px);
     min-height: 100%;
-    background-color: red;
     margin: 10px;
     color: aliceblue;
     
@@ -112,7 +111,7 @@
 .OneProduct .SoloProduct .product_info .inventory .button{
     width: 90px;
     border-radius: 20px;
-    border: 3px solid #5d5c5c;
+    border: 3px solid #809c5c;
     font-size: 18px;
     padding-top: 2px;
     background-color: rgba(255, 255, 255, 0.943);
@@ -128,6 +127,7 @@
 .OneProduct .SoloProduct .product_info .inventory .click{
     background-color:#809c5c;
     color: white;
+    border: 3px solid rgba(255, 255, 255, 0.943);
 }
 .OneProduct .SoloProduct .product_info .inventory .button .quantitie{
     
@@ -181,7 +181,6 @@
         width: auto;
     }
     .OneProduct .SoloProduct{
-        /* display: flex; */
         justify-content: center;
     }
     .OneProduct .SoloProduct img{
@@ -196,5 +195,8 @@
     .OneProduct .SoloProduct .product_info{
         width: 90%;
         min-width: auto;
+    }
+    .OneProduct .SoloProduct .product_info .inventory .button{
+        margin: 10px;
     }
 }

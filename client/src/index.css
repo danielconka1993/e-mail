@@ -19,6 +19,7 @@ main{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    background-color: rgb(229, 229, 229);
 }
 footer{
     height: 30px;

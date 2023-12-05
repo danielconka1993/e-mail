@@ -33,10 +33,10 @@ const button_guantitie = (index) => { // Výběr Množství
   setTargetItem(index)
   setNumberBuy(1)
 }
-const btnSubmit = () => {
 
-  console.log( name + " " + quantities[targetItem] + " " + prices[targetItem])
-} 
+const btnSubmit = () => {
+  console.log( "Produkt " + name + " " + numberBuy + " Ks " + quantities[targetItem] + " g " + prices[targetItem] + " Kč, celkem " + (numberBuy*prices[targetItem] + " Kč."))
+}  
   // ------------------------------------------------------------------------
   return (
     <div className="OneProduct">
@@ -88,8 +88,8 @@ const btnSubmit = () => {
             <section className="buy">
               <input type="text" value={numberBuy} onChange={(e) => setNumberBuy(e.target.value === '' ? 0 : parseInt(e.target.value, 10))} />
 
-              <button type="submit">
-                <MdAddShoppingCart className="icon" onMouseDown={btnSubmit} />
+              <button type="submit" onClick={btnSubmit}>
+                <MdAddShoppingCart className="icon" />
                 Do košíku
               </button>
             </section>

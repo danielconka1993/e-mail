@@ -1,6 +1,7 @@
 const express = require("express");
 const loginData = express.Router();
 const UserModel = require("../../models/user");
+const { setSession } = require("../../helpers/session");
 
 loginData.post("/login", async (req, res) => {
   try {
@@ -10,7 +11,19 @@ loginData.post("/login", async (req, res) => {
     const user = await UserModel.findOne({ email, password });
 
     if (user) {
-      // Pokud uživatel existuje, můžeme vrátit úspěšnou odpověď
+      // Uložení informací o uživateli do session
+      setSession(req, {
+        _id: user._id,
+        email: user.email,
+        name: user.name,
+        phone: user.phone,
+        rank: user.rank,
+        shoppingBasket: user.shoppingBasket,
+        purchasesCompleted: user.purchasesCompleted,
+        date: user.date
+      });
+
+      // Vrátíme úspěšnou odpověď
       res
         .status(200)
         .json({ msg: "Přihlášení úspěšné", user: [user], success: true });

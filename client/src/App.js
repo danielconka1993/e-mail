@@ -5,6 +5,7 @@ import Home from "./pages/Home"
 import Error from "./pages/Error"
 import AllProducts from "./components/products/AllProducts"
 import OneProduct from "./components/products/OneProduct"
+import ShoppingBasket from "./pages/ShoppingBasket"
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
             <Route path="*" element={<Error />} />
             <Route path="/products/" element={<AllProducts />} />
             <Route path="/products/:productID" element={<OneProduct />} />
+            <Route path="/kosik" element={<ShoppingBasket />}/>
           </Route>
         </Routes>
       </BrowserRouter>

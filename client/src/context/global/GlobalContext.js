@@ -11,6 +11,8 @@ const mainState = { // 2. 2 -  Globalní Reducer - Defaultni state
     loginPassword: "", // - 4 Login data
     loginPhone: "", // - 4 Login data
     loginRank: "", // - 4 Login data
+    loginShoppingBasket: [], // 4 - Login data Košík
+    loginPurchasesCompleted: [], // 4 - Login data - Hotové nákupy
     loginDate: "", // - 4 Login data
 }
 
@@ -34,7 +36,7 @@ export const GlobalProvider = ({children}) => { // 1.3 Context + children(pro Ap
         })
     }
 
-    const loginData = (loginID, loginEmail, loginName, loginPhone, loginRank, loginDate) => { // 4.2 - dispatch LOGIN data
+    const loginData = (loginID, loginEmail, loginName, loginPhone, loginRank, loginShoppingBasket, loginPurchasesCompleted, loginDate) => { // 4.2 - dispatch LOGIN data
         dispatch({
             type: "LOGIN_DATA",
             payload:{
@@ -43,6 +45,8 @@ export const GlobalProvider = ({children}) => { // 1.3 Context + children(pro Ap
                 loginName,
                 loginPhone,
                 loginRank,
+                loginShoppingBasket,
+                loginPurchasesCompleted,
                 loginDate,
             }
         })
@@ -63,6 +67,8 @@ export const GlobalProvider = ({children}) => { // 1.3 Context + children(pro Ap
                 loginName:state.loginName,
                 loginPhone: state.loginPhone,
                 loginRank: state.loginRank,
+                loginShoppingBasket: state.loginShoppingBasket,
+                loginPurchasesCompleted: state.loginPurchasesCompleted,
                 loginDate:state.loginDate,
             }}
     > 

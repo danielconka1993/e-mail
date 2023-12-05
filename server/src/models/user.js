@@ -22,6 +22,12 @@ const userModel = new mongoose.Schema({
         type:String,
         require:true,
     },
+    shoppingBasket:{
+        type:[String],
+    },
+    purchasesCompleted:{
+        type:[String],
+    },
     date:{
         type: String,
         require:true,

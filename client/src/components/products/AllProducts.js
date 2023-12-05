@@ -14,8 +14,8 @@ const AllProducts = () => {
   const getProducts = async () => {
     const data = await fetch ("http://localhost:5000/get-products");
     const finalData = await data.json();
-    const {msg, products} = finalData;
-    console.log(products)
+    const {products} = finalData;
+    // console.log(products)
     setNewProducts(products);
     // setServerMsg(msg)
   }
