@@ -4,11 +4,14 @@ const { getSessionData } = require("../../helpers/session"); // bere pouze getSe
 
 router.get("/getSessionData", (req, res) => {
   try {
+    console.log("Trying to get session data...");
     const sessionData = getSessionData(req);
 
     if (sessionData) {
+      console.log("Session data found:", sessionData);
       res.status(200).json(sessionData);
     } else {
+      console.log("Session data not found");
       res.status(404).json({ msg: "Data not found in session" });
     }
   } catch (err) {

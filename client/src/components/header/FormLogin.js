@@ -14,6 +14,7 @@ const FormLogin = () => {
   });
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [error, setError] = useState("");
+  const [sessionData, setSessionData] = useState(null);
   // -------------------------------------------------------
 
   useEffect(() => {

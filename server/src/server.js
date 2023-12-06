@@ -10,7 +10,7 @@ const getRegistration = require("./routes/GET/getRegistration"); // 4 GET regist
 const loginData = require("./routes/POST/loginData") // 6 Login POST
 const productSave = require("./routes/POST/saveProduct_Data") // 8 Product POST
 const productsGet = require("./routes/GET/getProducts") // 9 Products Get
-const getSessionDataRoute = require("./routes/GET/getSessionData"); // 10.1 - Session Get
+const getSessionData= require("./routes/GET/getSessionData"); // 10.1 - Session Get
 
 const cors = require("cors"); // 5 front-end
 
@@ -48,4 +48,4 @@ app.use("/", getRegistration); // 4 GET registration
 app.use("/", loginData) // 6 POST Login
 app.use("/", productSave) // 8 POST Product
 app.use("/", productsGet) // 9 Products Get
-app.use("/", getSessionDataRoute); // 10.1 Session Get
+app.use("/", getSessionData); // 10.1 Session Get

@@ -40,7 +40,7 @@ useEffect(() => {
   // Zde můžete provést volání na server nebo jiné metody pro načítání dat ze session
   // V tomto příkladu používám fetch pro načítání dat ze serveru
 
-  fetch("http://localhost:5000/getSessionData") // Upravte URL podle vašeho serveru
+  fetch("http://localhost:5000/getSessionData") 
     .then((response) => response.json())
     .then((data) => {
       setSessionData(data);
